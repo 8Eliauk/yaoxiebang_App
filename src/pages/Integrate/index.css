@@ -1,0 +1,146 @@
+.Integrate_box {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(181deg, rgba(0, 199, 164, 0.19) 0%, #FFFFFF 100%, #FFFFFF 100%);
+  position: absolute;
+  z-index: 10;
+}
+.Integrate_box .header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.Integrate_box .header span {
+  font-size: 0.4533rem;
+}
+.Integrate_box .header span:nth-child(1) {
+  width: 22px;
+  height: 22px;
+  background: url(images/leftreturn.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 10px;
+}
+.Integrate_box .header span:nth-child(2) {
+  flex: 2;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+.Integrate_box .header span:nth-child(3) {
+  color: #404b5e;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.Integrate_box .Integrate_num {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+.Integrate_box .Integrate_num .num_left h3 {
+  font-size: 36px;
+  margin-left: 22px;
+}
+.Integrate_box .Integrate_num .num_left h3::after {
+  content: '积分';
+  font-size: 12px;
+  color: #404B5E;
+  font-weight: normal;
+}
+.Integrate_box .Integrate_num .num_right {
+  margin-right: 42px;
+}
+.Integrate_box .Integrate_num .num_right span {
+  font-size: 0.2667rem;
+  line-height: 2.6667rem;
+}
+.Integrate_box .get_Integrate {
+  display: flex;
+  justify-content: space-around;
+}
+.Integrate_box .get_Integrate div {
+  width: 168px;
+  height: 59px;
+}
+.Integrate_box .get_Integrate div:nth-child(1) {
+  background: url(images/earnpoints.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .get_Integrate div:nth-child(2) {
+  background: url(images/returnintegral.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .sale_price {
+  padding: 0 14px;
+  margin-top: 31px;
+}
+.Integrate_box .sale_price p {
+  font-size: 16px;
+  color: #232B3C;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.Integrate_box .sale_price ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Integrate_box .sale_price ul li {
+  width: 168px;
+  height: 161px;
+  margin: 2px;
+}
+.Integrate_box .sale_price ul li div {
+  position: relative;
+  top: 115px;
+  left: 10px;
+}
+.Integrate_box .sale_price ul li div p:nth-child(1) {
+  font-size: 12px;
+}
+.Integrate_box .sale_price ul li div p:nth-child(2) span:nth-child(1) {
+  color: #00c7a4;
+  font-size: 18px;
+}
+.Integrate_box .sale_price ul li div p:nth-child(2) span:nth-child(2) {
+  color: #8d93a1;
+  font-size: 12px;
+}
+.Integrate_box .sale_price ul li div p:nth-child(2) span:nth-child(3) {
+  color: #8d93a1;
+  font-size: 12px;
+  text-decoration: line-through;
+  margin-left: 14px;
+}
+.Integrate_box .sale_price ul li:nth-child(1) {
+  background: url(images/discounts.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .sale_price ul li:nth-child(2) {
+  background: url(images/experience.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .sale_price ul li:nth-child(3) {
+  background: url(images/overtime.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .sale_price ul li:nth-child(4) {
+  background: url(images/discounts.png) no-repeat;
+  background-size: 100% 100%;
+}
+.Integrate_box .bottom_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.Integrate_box .bottom_btn button {
+  width: 347px;
+  height: 48px;
+  background-color: #6CD8B1;
+  color: white;
+  border: none;
+  font-size: 0.4267rem;
+  border-radius: 0.1333rem;
+}

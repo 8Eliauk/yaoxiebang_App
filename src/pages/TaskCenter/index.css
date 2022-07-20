@@ -1,0 +1,326 @@
+.TaskCenter_box {
+  width: 100%;
+  height: 195px;
+  background: linear-gradient(360deg, #FDF7F6 0%, #F9EBEA 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.TaskCenter_box .TaskCenterHeader {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.TaskCenter_box .TaskCenterHeader span {
+  font-size: 0.4533rem;
+}
+.TaskCenter_box .TaskCenterHeader span:nth-child(1) {
+  width: 22px;
+  height: 22px;
+  background: url(images/leftreturn.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 10px;
+}
+.TaskCenter_box .TaskCenterHeader span:nth-child(2) {
+  flex: 2;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+.TaskCenter_box .TaskCenterHeader span:nth-child(3) {
+  color: #404b5e;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.TaskCenter_box .current_integral {
+  display: flex;
+  justify-content: space-between;
+}
+.TaskCenter_box .current_integral .box_left {
+  margin-left: 22px;
+}
+.TaskCenter_box .current_integral .box_left .left_top {
+  display: flex;
+  align-items: center;
+}
+.TaskCenter_box .current_integral .box_left .left_top span {
+  display: inline-block;
+}
+.TaskCenter_box .current_integral .box_left .left_top span:nth-child(1) {
+  width: 16px;
+  height: 16px;
+  background: url(images/havebeensigned.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .current_integral .box_left .left_top span:nth-child(2) {
+  font-size: 12px;
+  margin: 0 5px;
+}
+.TaskCenter_box .current_integral .box_left .left_top span:nth-child(3) {
+  width: 5px;
+  height: 9px;
+  background: url(images/rightreturn.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .current_integral .box_left .left_center {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 9px;
+  margin-bottom: 4px;
+}
+.TaskCenter_box .current_integral .box_left .left_bottom {
+  font-size: 11px;
+}
+.TaskCenter_box .current_integral .box_left .left_bottom span {
+  color: #e57f49;
+}
+.TaskCenter_box .current_integral .right_btn {
+  font-size: 14px;
+  border-radius: 15px;
+  width: 87px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #e68551;
+  color: #e57f49;
+  margin-right: 24px;
+  margin-top: 24px;
+}
+.TaskCenter_box .signIn_box {
+  padding: 10px;
+  background-color: #FAF0E7;
+  border-radius: 8px;
+  height: 192px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.TaskCenter_box .signIn_box p:nth-child(1) {
+  font-size: 14px;
+  color: #232B3C;
+  font-weight: 600;
+}
+.TaskCenter_box .signIn_box p:nth-child(1) span {
+  color: #E58450;
+}
+.TaskCenter_box .signIn_box p:nth-child(2) {
+  font-size: 11px;
+  color: #56575C;
+  margin-top: 4px;
+}
+.TaskCenter_box .signIn_box ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+.TaskCenter_box .signIn_box ul li {
+  width: 40px;
+  height: 57px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(1) {
+  background-color: #fcf6f0;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(1) span:nth-child(1) {
+  width: 26px;
+  height: 26px;
+  background: url(images/tobesigned.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(1) span:nth-child(2) {
+  font-size: 12px;
+  color: black;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(n+2) {
+  background-color: #fcf6f0;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(n+2) span:nth-child(1) {
+  width: 26px;
+  height: 26px;
+  background: url(images/tobesigned.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .signIn_box ul li:nth-child(n+2) span:nth-child(2) {
+  font-size: 12px;
+  color: #56575C;
+}
+.TaskCenter_box .signIn_box .btn_signIn {
+  text-align: center;
+  margin-top: 24px;
+}
+.TaskCenter_box .signIn_box .btn_signIn button {
+  width: 191px;
+  height: 39px;
+  background: linear-gradient(90deg, #FECA2C 0%, #FE9804 100%);
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  color: white;
+}
+.TaskCenter_box .tab_box {
+  margin-top: 26px;
+}
+.TaskCenter_box .tab_box ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #505B6D;
+  font-weight: 600;
+}
+.TaskCenter_box .tab_box .tab_content {
+  margin-top: 22px;
+  margin-left: 16px;
+}
+.TaskCenter_box .tab_box .tab_content .newTask p {
+  font-size: 0.3733rem;
+  font-weight: 600;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul {
+  width: 86%;
+  height: 65px;
+  background-color: #F6F7F9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(1) {
+  width: 24px;
+  height: 22px;
+  background: url(images/edit.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(2) {
+  line-height: 20px;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(2) span {
+  color: #27313D;
+  font-size: 14px;
+  font-weight: 600;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(2) p {
+  font-size: 10px;
+  color: #878B97;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(2) p span {
+  color: #FB8042;
+  font-size: 10px;
+}
+.TaskCenter_box .tab_box .tab_content .newTask ul li:nth-child(3) {
+  width: 74px;
+  height: 29px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 29px;
+  border: 1px solid #FB8042;
+  color: #FB8042;
+  border-radius: 5px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul {
+  display: flex;
+  flex-direction: column;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li {
+  text-align: center;
+  width: 90%;
+  height: 60px;
+  margin: 5px auto;
+  background-color: #F6F7F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  background: url(images/check.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) {
+  text-align: left;
+  flex: 2;
+  margin-left: 14px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) p:nth-child(1) {
+  color: black;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) p:nth-child(2) {
+  font-size: 10px;
+  color: #878B97;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) p:nth-child(2) em {
+  font-style: normal;
+  color: #FB8042;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(3) {
+  width: 74px;
+  height: 29px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 29px;
+  border: 1px solid #FB8042;
+  color: #FB8042;
+  border-radius: 5px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  background: url(images/share.png) no-repeat;
+  background-size: 100% 100%;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) {
+  text-align: left;
+  flex: 2;
+  margin-left: 14px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) p:nth-child(1) {
+  color: black;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) p:nth-child(2) {
+  font-size: 10px;
+  color: #878B97;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) p:nth-child(2) em {
+  font-style: normal;
+  color: #FB8042;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(3) {
+  width: 74px;
+  height: 29px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 29px;
+  border: 1px solid #FB8042;
+  color: #FB8042;
+  border-radius: 5px;
+}
+.TaskCenter_box .league {
+  width: 90%;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.TaskCenter_box .league button {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(90deg, #6CD8B1 0%, #59C099 100%);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
