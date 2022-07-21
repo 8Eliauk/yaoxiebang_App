@@ -9,7 +9,8 @@ import {
     reqPointSignIn,
     reqPointsAmount,
     reqNewTask,
-    reqEveryDayTask
+    reqEveryDayTask,
+    reqIsSignToday
 } from '../../api'
 
 function TaskCenter(props) {
@@ -22,7 +23,9 @@ function TaskCenter(props) {
         // 获取新手任务的数据
         getNewTask();
         // 获取每日任务的数据
-        getEveryDayTask()
+        getEveryDayTask();
+        // 获取今日签到情况
+        getIsSignToday();
     }, [])
 
     // 判断是否签到 0 表示签到过期  1表示已签到  2表示未签到
@@ -30,7 +33,7 @@ function TaskCenter(props) {
     async function getWeekState() {
         let result = await reqWeekState()
         if (result.msg === 'ok') {
-            setWeekState((weekState) => weekState = result.data)
+            setWeekState(result.data)
         }
     }
 
@@ -70,21 +73,23 @@ function TaskCenter(props) {
     const [EveryTask, setEveryTask] = useState([])
     async function getEveryDayTask() {
         let result = await reqEveryDayTask();
-        console.log(result);
         if (result.msg === 'ok') {
             setEveryTask(result.data)
         }
     }
-    console.log(EveryTask);
 
-    const tabData = ['新手任务', '每日任务']
-
-    const [num, setNum] = useState(0)
+    // 获取今日签到情况
+    // 数值为 0 表示未签到 数值为 1 表示已签到
+    const [IsSignToday,setIsSignToday] = useState({})
+    async function getIsSignToday() {
+        let result = await reqIsSignToday()
+        if(result.msg === 'ok') {
+            setIsSignToday(result.data)
+        }
+    }
 
     // 已签到的按钮颜色
-    let btn_signIn_gray = {
-        background: '#CCCCCC',
-    }
+    let btn_signIn_gray = { background: '#CCCCCC'}
 
     // 领取积分后的背景颜色
     let signbgColor = {
@@ -108,7 +113,7 @@ function TaskCenter(props) {
     function pushPopUp(event) {
         props.history.push('/taskcenter/popup')
         // 限制签到按钮次数
-        event.target.disabled = true
+        // event.target.disabled = true
         setflag(2)
         getFlagBtn(flag)
         // 点击按钮实现积分签到
@@ -127,6 +132,10 @@ function TaskCenter(props) {
         paddingBottom: '5px',
         borderBottom: '2px solid #FB8042',
     }
+
+    const [num, setNum] = useState(0)
+
+    const tabData = ['新手任务', '每日任务']
 
     // tab栏切换
     function tabChange(index) {
@@ -176,9 +185,9 @@ function TaskCenter(props) {
                                             {
                                                 item === 0 ?
                                                     <span style={{ fontSize: '10px' }}>已过期</span> :
-                                                    item === 1 ?
-                                                        <span style={{ color: '#FFF' }}>已签到</span> :
-                                                        <span>+5</span>
+                                                item === 1 ?
+                                                    <span style={{ color: '#FFF' }}>已签到</span> :
+                                                    <span>+10</span>
                                             }
                                         </li>
                                     )
@@ -186,7 +195,7 @@ function TaskCenter(props) {
                             }
                         </ul>
                         <div className='btn_signIn'>
-                            <button onClick={pushPopUp} style={flag === 1 ? null : btn_signIn_gray} >{flag === 1 ? '签到' : '已签到'}</button>
+                            <button onClick={pushPopUp} style={IsSignToday.isSignToday === 0 ? null : btn_signIn_gray} >{IsSignToday.isSignToday === 0 ? '签到' : '已签到'}</button>
                         </div>
                     </div>
 

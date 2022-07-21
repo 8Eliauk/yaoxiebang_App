@@ -6,11 +6,13 @@ import {reqPointsAmount,reqGoodsList} from '../../api'
 function Integrate(props) {
 
     useEffect(()=> {
+        // 获取剩余积分及抽奖次数 
         getPointsAmoun();
         // 获取积分兑换商品列表
         getGoodsList();
     },[])
 
+    // 获取剩余积分及抽奖次数
     const [Point,setPoint] = useState({});
     async function getPointsAmoun() {
         let result = await reqPointsAmount()
@@ -19,6 +21,7 @@ function Integrate(props) {
         }
     }
 
+    // 获取积分兑换商品列表
     const [GoodsList,setGoodsList] = useState([]);
     async function getGoodsList() {
         let result = await reqGoodsList();
@@ -58,8 +61,6 @@ function Integrate(props) {
         },
     ]
 
-
-
     // 返回首页
     function goBack() {
         props.history.push('/home');
@@ -87,7 +88,7 @@ function Integrate(props) {
                         <h3>{Point.points}</h3>
                     </div>
                     <div className='num_right'>
-                        <span>兑换记录</span>
+                        <span>兑换记录 <em></em></span>
                     </div>
                 </div>
                 <div className='get_Integrate'>

@@ -21,3 +21,6 @@ export const reqEveryDayTask = () => requests({url:'/points/getDailyTasksList',m
 
 // 获取积分兑换商品列表
 export const reqGoodsList = () => requests({url:'/points/goodsList',method:'get'})
+
+// 获取今日签到情况
+export const reqIsSignToday = () => requests({url:'/points/isSignToday',method:'get'})

@@ -16,7 +16,7 @@ function PopUp(props) {
                 <ul className='popup_content'>
                     <li></li>
                     <li>
-                        <p>恭喜您完成任务，积分+30</p>
+                        <p>恭喜您完成任务，积分+10</p>
                         <p>今日还可获得<span>1195</span>积分</p>
                     </li>
                     <li>

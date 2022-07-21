@@ -53,8 +53,19 @@
   margin-right: 42px;
 }
 .Integrate_box .Integrate_num .num_right span {
-  font-size: 0.2667rem;
-  line-height: 2.6667rem;
+  font-size: 10px;
+  line-height: 60px;
+  position: relative;
+}
+.Integrate_box .Integrate_num .num_right span em {
+  position: absolute;
+  right: -10px;
+  top: 3px;
+  display: block;
+  width: 6px;
+  height: 11px;
+  background: url(images/rightreturn.png) no-repeat;
+  background-size: 100% 100%;
 }
 .Integrate_box .get_Integrate {
   display: flex;
