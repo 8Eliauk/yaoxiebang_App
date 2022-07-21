@@ -27,14 +27,31 @@
     }
 
     .ForRecord_content {
-        li {
+        .ForRecord_content_item {
             width: 100%;
-            height: 50px;
-            background-color: white;
-            text-align: center;
-            line-height: 50px;
-            margin: 10px 0;
+            .alltimes {
+                margin-left: 20px;
+            }
+
+            div {
+                background: #fff;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 3px 0;
+                div {
+                    height: 40px;
+                }
+            }
         }
 
     }
+
+    .Pagination {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 }

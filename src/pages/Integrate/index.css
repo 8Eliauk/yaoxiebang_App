@@ -120,6 +120,9 @@
   top: 115px;
   left: 10px;
 }
+.Integrate_box .sale_price ul li .content p {
+  line-height: 15px;
+}
 .Integrate_box .sale_price ul li .content p:nth-child(1) {
   font-size: 12px;
 }

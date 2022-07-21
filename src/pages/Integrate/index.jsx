@@ -41,17 +41,15 @@ function Integrate(props) {
     }
 
     // 跳转到优惠券
-    function pushIntegrateTicket(id) {
+    function pushIntegrateTicket({id,name,points,price,imgUrl}) {
         return () => {
-            if (id === 1) {
-                props.history.push('/integrate/integrateticket')
-            }
+            // console.log(id,name,points,price,imgUrl);
+            props.history.push(`/integrate/integrateticket`,{id,name,points,price,imgUrl})
         }
     }
 
     // 跳转到兑换记录页面
     function pushForRecord() {
-        // console.log(props);
         console.log(123);
         props.history.push('/integrate/forrecord')
     }
@@ -80,7 +78,7 @@ function Integrate(props) {
                     <p>超值优惠</p>
                     <ul>
                         {GoodsList.map((item) =>
-                            <li key={item.id} onClick={pushIntegrateTicket(item.id)} >
+                            <li key={item.id} onClick={pushIntegrateTicket(item)} >
                                 <div className='picture'>
                                     <img src={item.imgUrl} alt="" />
                                 </div>
@@ -94,7 +92,6 @@ function Integrate(props) {
                                 </div>
                             </li>
                         )}
-
                     </ul>
                 </div>
                 <div className='bottom_btn'>

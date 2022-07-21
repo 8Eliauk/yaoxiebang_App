@@ -207,7 +207,6 @@ function TaskCenter(props) {
                         </ul>
                         <div className="tab_content">
                             <div className='newTask' style={{ display: (num === 0) ? 'block' : 'none' }}>
-                                <p>新手任务</p>
                                 <ul>
                                     <li></li>
                                     <li>

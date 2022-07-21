@@ -155,7 +155,6 @@
 }
 .TaskCenter_box .signIn_box .btn_signIn {
   text-align: center;
-  margin-top: 24px;
 }
 .TaskCenter_box .signIn_box .btn_signIn button {
   width: 191px;
@@ -179,10 +178,6 @@
 .TaskCenter_box .tab_box .tab_content {
   margin-top: 22px;
   margin-left: 16px;
-}
-.TaskCenter_box .tab_box .tab_content .newTask p {
-  font-size: 0.3733rem;
-  font-weight: 600;
 }
 .TaskCenter_box .tab_box .tab_content .newTask ul {
   width: 86%;
@@ -228,6 +223,7 @@
   border-radius: 5px;
 }
 .TaskCenter_box .tab_box .tab_content .everyTask_box ul {
+  margin-top: -14px;
   display: flex;
   flex-direction: column;
 }
@@ -254,6 +250,10 @@
   text-align: left;
   flex: 2;
   margin-left: 14px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) p {
+  margin-top: 10px;
+  line-height: 6px;
 }
 .TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(1) span:nth-child(2) p:nth-child(1) {
   color: black;
@@ -286,6 +286,10 @@
   text-align: left;
   flex: 2;
   margin-left: 14px;
+}
+.TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) p {
+  margin-top: 10px;
+  line-height: 6px;
 }
 .TaskCenter_box .tab_box .tab_content .everyTask_box ul li:nth-child(2) span:nth-child(2) p:nth-child(1) {
   color: black;

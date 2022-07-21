@@ -24,3 +24,10 @@ export const reqGoodsList = () => requests({url:'/points/goodsList',method:'get'
 
 // 获取今日签到情况
 export const reqIsSignToday = () => requests({url:'/points/isSignToday',method:'get'})
+
+// 获取积分详情
+export const reqPointsDetail = (page,limit) => requests({url:`/points/getPointsDetail?page=${page}&limit=${limit}`,method:'get'})
+
+// 我要兑换商品操作
+export const reqGenerateOrder = (data) => requests({url:'/points/generateOrder',method:'post',data})
+

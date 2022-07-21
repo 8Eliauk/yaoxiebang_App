@@ -1,10 +1,37 @@
 import './index.css'
+import React from 'react'
+import {reqGenerateOrder} from '../../api'
+import DrawerComponents from '../../components/DrawerComponents'
 
 function IntegrateTicket(props) {
+
+    async function getGenerateOrder(value) {
+        const {receiver,phone,address,email} = value
+        console.log(value);
+        let data = {
+            goodsId:id,
+            receiver,
+            phone,
+            address,
+            email
+        }
+        let result = await reqGenerateOrder(data)
+        console.log(result);
+    }
+
+    function getFormValue(value) {
+        getGenerateOrder(value)
+    }
+
+
     // 返回上一级
     function goBack() {
         props.history.goBack();
     }
+    
+    // 接收参数
+    const {id,name,points,price,imgUrl} = props.location.state || {}
+    console.log(id,name,points,price,imgUrl);
     
     return (
         <div className='IntegrateTicket'>
@@ -14,10 +41,12 @@ function IntegrateTicket(props) {
                 <span></span>
             </div>
             <div className='Integrate_quan'>
-                <div className='quan_'></div>
+                <div className='quan_'>
+                    <img src={imgUrl} alt="" />
+                </div>
                 <div className='quan60_'>
-                    <span className='VIP_quan'>VIP60优惠券</span>
-                    <p><span>1688</span><span>积分</span></p>
+                    <span className='VIP_quan'>{name}</span>
+                    <p><span>{points}</span><span>积分</span></p>
                 </div>
                 <div className='beiying'></div>
                 <div className='introduce_box'>
@@ -35,7 +64,8 @@ function IntegrateTicket(props) {
                 </div>
             </div>
             <div className='bottom_btn'>
-                <button>积分不够，去赚积分</button>
+                {/* <button>我要兑换商品</button> */}
+                <DrawerComponents getFormValue={getFormValue} ></DrawerComponents>
             </div>
         </div>
     )

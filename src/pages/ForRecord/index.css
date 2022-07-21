@@ -25,11 +25,25 @@
   background: url(images/leftreturn.png) no-repeat;
   background-size: 100% 100%;
 }
-.ForRecord_box .ForRecord_content li {
+.ForRecord_box .ForRecord_content .ForRecord_content_item {
   width: 100%;
-  height: 50px;
-  background-color: white;
-  text-align: center;
-  line-height: 50px;
-  margin: 10px 0;
+}
+.ForRecord_box .ForRecord_content .ForRecord_content_item .alltimes {
+  margin-left: 20px;
+}
+.ForRecord_box .ForRecord_content .ForRecord_content_item div {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3px 0;
+}
+.ForRecord_box .ForRecord_content .ForRecord_content_item div div {
+  height: 40px;
+}
+.ForRecord_box .Pagination {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
