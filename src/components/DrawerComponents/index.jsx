@@ -40,28 +40,44 @@ const DrawerComponents = (props) => {
                 <Form.Item
                     label="收件人"
                     name="receiver"
-                    rules={[{required: true,message: '请输入收件人姓名',},]}
+                    rules={[
+                      {required: true,message: '请输入收件人姓名',},
+                    ]}
                 >
                     <Input />
                 </Form.Item>
                 <Form.Item
                     label="手机号"
                     name="phone"
-                    rules={[{required: true,message: '请输入您的手机号',},]}
+                    rules={[
+                      {required: true,message: '请输入您的手机号',},
+                      {
+                        pattern:/^1[356789]\d{9}$/,
+                        message:"手机号格式错误"
+                      }
+                    ]}
                 >
                     <Input />
                 </Form.Item>
                 <Form.Item
                     label="收货地址"
                     name="address"
-                    rules={[{required: true,message: '请输入您的收货地址',},]}
+                    rules={[
+                      {required: true,message: '请输入您的收货地址',},
+                    ]}
                 >
                     <Input />
                 </Form.Item>
                 <Form.Item
                     label="邮箱"
                     name="email"
-                    rules={[{required: true,message: '请输入您的邮箱',},]}
+                    rules={[
+                      {required: true,message: '请输入您的邮箱',},
+                      {
+                        pattern:/^([a-zA-Z0-9]+)@(([a-zA-z0-9]+)\.){1,2}[a-z]{2,3}$/,
+                        message:"格式错误"
+                      }
+                    ]}
                 >
                     <Input />
                 </Form.Item>
