@@ -5,8 +5,11 @@ import {reqPointsDetail} from '../../api'
 
 function ForRecord(props) {
 
+    // let [page,setpage] = useState(1)
+    // let [limit,setlimit] = useState(5)
+
     useEffect(()=> {
-        getPointsDetail();
+        getPointsDetail(1,5);
     },[])
 
     
@@ -14,12 +17,14 @@ function ForRecord(props) {
     const [paging,setPaging] = useState([] || undefined )
     const [totalCount,setTotalCount] = useState(0)
 
-    // 声明分页的数据
-    const [page,setpage] = useState(1)
-    const [limit,setlimit] = useState(10)
+    // 初始化分页的数据
+    let [page,setpage] = useState(1)
+    let [limit,setlimit] = useState(5)
 
-    async function getPointsDetail(page,limit) {
-       let result = await reqPointsDetail(page=1,limit=10);
+    async function getPointsDetail(a,b) {
+        console.log(a,b);
+    //    let result = await reqPointsDetail(page=1,limit=5);
+       let result = await reqPointsDetail(a,b);
        if(result.msg === 'ok') {
         setPaging(result.data.data)
         setTotalCount(result.data.totalCount)
@@ -28,12 +33,14 @@ function ForRecord(props) {
 
     // // changePage 改变分页
     function changePage() {
-        return async (page,limit) => {
+        return async (page,pageSize) => {
             setpage(page)
-            setlimit(limit)
-            // console.log(page,limit);
-            // reqPointsDetail(page,limit)
-            getPointsDetail(page,limit)
+            setlimit(pageSize)
+            let result = await reqPointsDetail(page,pageSize)
+            if(result.msg === 'ok') {
+                setPaging(result.data.data)
+                setTotalCount(result.data.totalCount)
+            }
         }
     }
 
@@ -59,7 +66,7 @@ function ForRecord(props) {
                                     item.data.map((item1)=> {
                                         return (
                                             <div  key={item1.id}>
-                                                <div>{item1.msg}，积分<span>+{item1.points}</span></div>
+                                                <div>{item1.msg}，积分<span>-{item1.points}</span></div>
                                                 <div>{item1.time}</div>
                                             </div>
                                         )
@@ -73,9 +80,12 @@ function ForRecord(props) {
             <div className='Pagination'>
                 <Pagination 
                     simple 
-                    current={page} 
-                    pageSize={limit} 
-                    total={Math.ceil(totalCount/limit)}
+                    // current={page} 
+                    current={page} // 当前页数
+                    // pageSize={limit} 
+                    pageSize={limit} // 每页条数
+                    // total={Math.ceil(totalCount/limit)}
+                    total={totalCount} // 数据总数
                     onChange={changePage(page,limit)}
                 />
             </div>

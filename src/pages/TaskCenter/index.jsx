@@ -118,6 +118,8 @@ function TaskCenter(props) {
         getFlagBtn(flag)
         // 点击按钮实现积分签到
         getPointSignIn()
+        // 点击签到刷新积分数量
+        getPointsAmount()
     }
 
     // 跳转到积分商城

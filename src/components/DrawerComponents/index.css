@@ -1,4 +1,28 @@
+/* 控制表单的高度 */
+.ant-drawer-content-wrapper {
+    height: 50% !important;
+}
+/* 能让表单左右不移动 */
+.ant-form-item-control {
+    flex: 0 100% !important;
+}
+/* 控制表单行间距的 */
+.ant-form-item {
+    margin-bottom: 10px !important;
+}
+/* 控制按钮居中显示 */
 .ant-col-offset-8 {
-    margin-left: 0;
+    margin-left: 0 !important;
     text-align: center;
+}
+/* 保持表单在宽度上自适应 */
+.ant-col-16 {
+    max-width: none !important;
+}
+/* 我要兑换商品的按钮 */
+.ant-btn {
+    width: 40%;
+    border: none !important;
+    color: white !important;
+    background: linear-gradient(90deg, #6CD8B1 0%, #59C099 100%) !important;
 }

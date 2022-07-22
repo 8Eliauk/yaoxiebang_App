@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import IntegrateTicket from '../IntegrateTicket'
 import ForRecord from '../ForRecord'
 import { reqPointsAmount, reqGoodsList } from '../../api'
+// import {reqMyPoints} from '../../api'
 function Integrate(props) {
 
     useEffect(() => {
@@ -11,7 +12,14 @@ function Integrate(props) {
         getPointsAmoun();
         // 获取积分兑换商品列表
         getGoodsList();
+        // 获取当前积分数量
+        // getMyPoints();
     }, [])
+
+    // async function getMyPoints() {
+    //     let result = await reqMyPoints()
+    //     console.log(result);
+    // }
 
     // 获取剩余积分及抽奖次数
     const [Point, setPoint] = useState({});
@@ -21,6 +29,7 @@ function Integrate(props) {
             setPoint(result.data)
         }
     }
+    // console.log(Point);
 
     // 获取积分兑换商品列表
     const [GoodsList, setGoodsList] = useState([]);

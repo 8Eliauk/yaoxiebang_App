@@ -35,7 +35,7 @@ const DrawerComponents = (props) => {
         visible={visible}
         key={'bottom'}
       >
-        <div>
+        {/* <div className='FormTable'> */}
             <Form onFinish={onFinish} >
                 <Form.Item
                     label="收件人"
@@ -71,12 +71,12 @@ const DrawerComponents = (props) => {
                     span: 16,
                     }}
                 >
-                    <Button type="primary" htmlType="submit">
+                    <Button htmlType="submit" >
                         提交
                     </Button>
                 </Form.Item>
             </Form>
-        </div>
+        {/* </div> */}
       </Drawer>
     </>
   );

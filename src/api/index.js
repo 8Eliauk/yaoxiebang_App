@@ -19,6 +19,9 @@ export const reqNewTask = () => requests({url:'/points/getNewbieTaskList',method
 // 每日任务
 export const reqEveryDayTask = () => requests({url:'/points/getDailyTasksList',method:'get'})
 
+// 获取当前积分多少
+export const reqMyPoints = () => requests({url:'/points/getMyPoints',method:'get'})
+
 // 获取积分兑换商品列表
 export const reqGoodsList = () => requests({url:'/points/goodsList',method:'get'})
 
